@@ -1,2 +1,2 @@
 #! bin/bash
-Echo "Hello world"
+echo "Hello world from Local"
