@@ -2,4 +2,4 @@
 echo "Script file added"
 echo "This is from Git Hub"
 echo "This is from Git Local"
-Testing 123
+mkdir /root/Second-Revision/test.txt
