@@ -1,7 +1,8 @@
 pipeline {
     agent any
-
-    
+triggers {
+        pollSCM('* * * * *') // Fixed syntax
+    }
     stages {
         stage('Stage 1') {
             steps {
@@ -12,7 +13,7 @@ pipeline {
         stage('Stage 2') {
             steps {
 	     sh 'echo "Hi This is from Stage 2"'
-            sh 'mkdir /root/Second-Revision/helloman4.log'
+            sh 'mkdir /root/Second-Revision/helloman5.log'
 	     sh 'echo "The Private IP is $(hostname -I)"'    
             }
         }
