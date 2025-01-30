@@ -2,5 +2,4 @@
 echo "Script file added"
 echo "This is from Git Hub"
 echo "This is from Git Local"
-mkdir /root/Second-Revision/Rust.txt
-echo "Rust file created successfully"
+echo "The Private IP address of the server $(hostname -i)"
