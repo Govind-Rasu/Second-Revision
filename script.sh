@@ -2,5 +2,4 @@
 echo "Script file added"
 echo "This is from Git Hub"
 echo "This is from Git Local"
-rm -rf /root/Second-Revision/Rust.txt
-echo "Rust file deleted successfully"
+echo "The name of the server 'hostname -I' "
