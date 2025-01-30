@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Stage 1') {
             steps {
-	    sh 'echo"Private IP of the server $(hostname -I) "'
+	    sh 'echo "Private IP of the server $(hostname -I) "'
             }
         }
 
