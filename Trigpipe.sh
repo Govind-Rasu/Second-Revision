@@ -1,24 +1,21 @@
-pipeline ()
-agent any
-triggers
-{
-pollSCM'* * * *  *'
+pipeline {
+    agent any
+
+    triggers {
+        pollSCM('* * * * *') // Fixed syntax
+    }
+
+    stages {
+        stage('Stage 1') {
+            steps {
+                sh 'echo "This is from Stage 1"'
+            }
+        }
+
+        stage('Stage 2') {
+            steps {
+                sh 'echo "This is from Stage 2"'
+            }
+        }
+    }
 }
- stages
-     {
-       stage ('stage 1')
-                   {
-            steps
-             {
-                 sh 'echo "This is from Stage1"'
-                   } 
-                   }
-        stage ('stage 2')
-              {
-             steps
-                 {
-                   sh 'echo "This is from Stage2 "'
-                 }
-                     }
-                       }
-                          
