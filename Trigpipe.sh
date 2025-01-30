@@ -14,7 +14,8 @@ pipeline {
 
         stage('Stage 2') {
             steps {
-                sh 'echo "Hi This is from Stage 2 and line 11"'
+            sh 'mkdir /root/Second-Revision/Testtrig.log'    
+	    sh 'echo "Hi This is from Stage 2 and line 11"'
             }
         }
     }
