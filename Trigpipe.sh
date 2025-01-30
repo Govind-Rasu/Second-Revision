@@ -16,7 +16,7 @@ pipeline {
             steps {
 	     sh 'echo "Hi This is from Stage 2"'
             sh 'mkdir /root/Second-Revision/helloman.log'
-	     sh 'echo "The Public IP is $(HOTNAME -I)"'    
+	     sh 'echo "The Privaate IP is $(hostname -I)"'    
             }
         }
     }
