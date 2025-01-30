@@ -1,8 +1,6 @@
 pipeline {
     agent any
-triggers {
-        pollSCM('* * * * *') // Fixed syntax
-    }
+
     stages {
         stage('Stage 1') {
             steps {
