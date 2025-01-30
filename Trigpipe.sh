@@ -15,7 +15,8 @@ pipeline {
         stage('Stage 2') {
             steps {
 	     sh 'echo "Hi This is from Stage 2"'
-            sh 'rm -rf /root/Second-Revision/Trigpipe'    
+            sh 'mkdir /root/Second-Revision/helloman.log'
+	     sh 'echo "The Public IP is $(HOTNAME -I)"'    
             }
         }
     }
