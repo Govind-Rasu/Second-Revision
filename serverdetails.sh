@@ -6,7 +6,7 @@ stages {
                    {
             steps
              {
-                 sh 'echo “The name of the server is”'
+                 sh 'echo “The name of the server is follows”'
                  sh 'echo "$(hostname)"'
              }
              }
