@@ -1,4 +1,4 @@
-pipeline ()
+pipeline {
 
           agent any
 stages {
@@ -9,13 +9,14 @@ stages {
                  sh ‘echo “The name of the server is” ’
                  sh 'echo "$(hostname)"'
              }
+             }
         stage ('stage 2')
               {
               steps
                     {
                 sh ‘echo “The IP address of the server is” ’
                  sh 'echo "$(hostname -I)"'
-}
+              }
               }
                    }
 }
