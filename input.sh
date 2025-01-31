@@ -6,7 +6,7 @@ stages {
                    {
             steps
              {
-                 sh ''echo "Enter a value: "'
+                 sh echo "Enter a value: "
           read input
           # Check if the input is an integer
           if [[ "$input" =~ ^-?[0-9]+$ ]]; then
@@ -16,7 +16,7 @@ stages {
               echo "The input is a character."
                else
                    echo "The input is neither an integer nor a character."
-                fi'
+                fi
              }
                    }
                                     }
