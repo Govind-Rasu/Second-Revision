@@ -1,22 +1,20 @@
 pipeline {
-
-          agent any
-stages {
-       stage ('stage 1')
-                   {
-            steps
-             {
-                 sh echo "Enter a value: "
-          read input
-          if [[ "$input" =~ ^-?[0-9]+$ ]]; then
-          echo "The input is an integer."
-          elif [[ "$input" =~ ^[a-zA-Z]$ ]]; then
-              echo "The input is a character."
-               else
-                   echo "The input is neither an integer nor a character."
-                fi
-             }
-                   }
-                                    }
-              fi
-      }
+    agent any
+    stages {
+        stage('Stage 1') {
+            steps {
+                script {
+                    def input = input(message: 'Enter a value:', parameters: [string(defaultValue: '', description: 'Value to check', name: 'UserInput')])
+                    if (input ==~ /^-?[0-9]+$/) {
+                        echo "The input is an integer."
+                    // Check if the input is a character
+                    } else if (input ==~ /^[a-zA-Z]$/) {
+                        echo "The input is a character."
+                    } else {
+                        echo "The input is neither an integer nor a character."
+                    }
+                }
+            }
+        }
+    }
+}
