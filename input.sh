@@ -6,7 +6,7 @@ stages {
                    {
             steps
              {
-                 sh 'echo "Enter a value: "
+                 sh ''echo "Enter a value: "'
           read input
           # Check if the input is an integer
           if [[ "$input" =~ ^-?[0-9]+$ ]]; then
@@ -20,4 +20,5 @@ stages {
              }
                    }
                                     }
-              }
+              fi
+      }
