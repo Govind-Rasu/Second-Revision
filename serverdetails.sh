@@ -6,7 +6,7 @@ stages {
                    {
             steps
              {
-                 sh ‘echo “The name of the server is”’
+                 sh 'echo “The name of the server is”'
                  sh 'echo "$(hostname)"'
              }
              }
@@ -14,7 +14,7 @@ stages {
               {
               steps
                     {
-                sh ‘echo “The IP address of the server is”’
+                sh 'echo “The IP address of the server is”'
                  sh 'echo "$(hostname -I)"'
               }
               }
